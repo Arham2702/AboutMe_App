@@ -12,7 +12,7 @@ class Myapp extends StatelessWidget {
         backgroundColor: Colors.teal.shade400,
         body: SafeArea(
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 backgroundImage: AssetImage('images/Arham photo 2.JPG'),
@@ -27,29 +27,34 @@ class Myapp extends StatelessWidget {
                     fontFamily: 'Pacifico'),
               ),
               Text(
-                'G.O.A.T',
+                'Flutter Developer',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'CastoroTitling',
-                    letterSpacing: 4),
+                    letterSpacing: 1),
               ),
-              Container(
-                color: Colors.white,
+              SizedBox(
+                height: 25,
+                width: 200,
+                child: Divider(
+                  color: Colors.white,
+                  thickness: 1.3,
+                ),
+              ),
+              Card(
+                //color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 9),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
-                      size: 30,
+                      size: 35,
                     ),
-                    SizedBox(
-                      width: 25,
-                    ),
-                    Text(
+                    title: Text(
                       '+91 1234567890',
                       style: TextStyle(
                         fontFamily: 'CastoroTitling',
@@ -57,30 +62,30 @@ class Myapp extends StatelessWidget {
                         color: Colors.teal.shade900,
                         fontWeight: FontWeight.bold,
                       ),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.symmetric( horizontal: 20),
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                //color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       color: Colors.teal,
-                      size: 30,
+                      size: 35,
                     ),
-                    Text(
+                    title: Text(
                       'arhamasif2702@gmail.com',
                       style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
+                          color: Colors.teal.shade900,
+                          fontSize: 21,
+                          fontWeight: FontWeight.bold
                       ),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -90,3 +95,4 @@ class Myapp extends StatelessWidget {
     );
   }
 }
+
